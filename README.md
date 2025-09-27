@@ -1,5 +1,5 @@
 # DomainModelingPrompter
-Domain Model Prompter (DMP) extracts domain/ conceptual model (classes/concepts and relationships) from user stories. It is implemented using Large Language Model (LLM) -gpt-4o and prompt chaining. 
+Domain Model Prompter (DMP) extracts domain/ conceptual model (classes/concepts and relationships) from user stories. It is implemented using Large Language Model (LLM) -gpt-4o-mini and prompt chaining. 
 
 # Input
 Set of well formed user stories having role, funciton and benefit part written in the format: “As a \<role\> I want to \<function/ feature>, so that \<benefit\>. Benefit part is optional.
