@@ -35,4 +35,4 @@ graphviz 0.20.1<br>
 json 2.0.9
 
 # Execution
-python \<project-path\>\domainmodelingchatbox.py 
+python \<project-path\>\main.py 
