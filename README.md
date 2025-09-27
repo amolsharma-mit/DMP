@@ -8,12 +8,15 @@ Set of well formed user stories having role, funciton and benefit part written i
 Graphical domain model.
 
 # DataSets used for evaluation
+The datasets are available in the [`Datasets`](./Datasets) folder:
 
 <b>Restaurant Management System (RMS): </b>RMS.txt<br>
 <b>Order Processing System (OPS): </b>OPS.txt<br>
 <b>Camping System (CP): </b>CP.txt<br>
 
 # Results
+The results are available in the [`Results`](./Results) folder:
+
 <b>Results reported in the paper are summarized in the files: </b>Results_DMP_RMS.xlsx, Results_DMP_OPS.xlsx, Results_DMP_CP.xlsx<br>
 <b>Results of comparison of DMP with existing tool Visual Narrator (VN) are presented in the files: </b>Results_Comparison_VN_DMP-RMS.xlsx, Results_Comparison_VN_DMP-OPS.xlsx, Results_Comparison_VN_DMP-CP.xlsx<br>
 <b>Results for the Planning Poker data set are presented in the file: </b>Results_Dataset2.xlsx<br>
