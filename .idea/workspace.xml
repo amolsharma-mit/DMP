@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b81da123-809a-42ea-93ea-02ece21302bc" name="Changes" comment="Commit. Readme changed.">
+      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -23,7 +24,7 @@
 }]]></component>
   <component name="GithubPullRequestsUISettings"><![CDATA[{
   "selectedUrlAndAccountId": {
-    "url": "https://github.com/amolsharma-mit/DomainModelingPrompter.git",
+    "url": "https://github.com/amolsharma-mit/DMP.git",
     "accountId": "eb86d945-71fc-4d09-96c7-23a4a92287ff"
   }
 }]]></component>
@@ -108,7 +109,15 @@
       <option name="project" value="LOCAL" />
       <updated>1758947509359</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Commit. Readme changed.">
+      <option name="closed" value="true" />
+      <created>1758948479537</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1758948479537</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">

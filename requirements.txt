@@ -1,0 +1,4 @@
+panel~=1.8.1
+graphviz~=0.21
+pandas~=2.3.2
+openai~=1.109.1
