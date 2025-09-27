@@ -1,0 +1,35 @@
+As a customer, I want to be able to browse the catalog of products.
+As a customer, I want to search for specific products using keywords.
+As a customer, I want to see the availability and pricing of products.
+As a customer, I want to add products to my shopping cart.
+As a customer, I want to view and edit the contents of my shopping cart.
+As a customer, I want to proceed to checkout an order.
+As a customer, I want to choose a shipping address for my order.
+As a customer, I want to select a preferred shipping method for my order.
+As a customer, I want to apply any available discounts or coupons to my order.
+As a customer, I want to provide payment details to complete my order.
+As a customer, I want to receive an order confirmation email.
+As a customer, I want to track the status of my order.
+As a customer, I want to initiate a return or exchange for a product.
+As a customer service representative, I want to view and manage customer orders.
+As a customer service representative, I want to update the status of an order.
+As a customer service representative, I want to provide refund or exchange options to customers.
+As a customer service representative, I want to view customer order histories.
+As a warehouse staff, I want to receive notifications about new orders.
+As a warehouse staff, I want to pick and pack products for orders.
+As a warehouse staff, I want to update the inventory when orders are fulfilled.
+As a warehouse staff, I want to generate shipping labels for orders.
+As a warehouse staff, I want to notify the shipping department about ready orders.
+As a shipping department staff, I want to receive shipping notifications.
+As a shipping department staff, I want to schedule pickups with shipping carriers.
+As a shipping department staff, I want to update the shipping status of orders.
+As a shipping department staff, I want to print shipping labels and packing slips.
+As a finance department staff, I want to generate invoices for orders.
+As a finance department staff, I want to track payment status and records.
+As a finance department staff, I want to generate financial reports based on orders.
+As a manager, I want to view overall order statistics.
+As a manager, I want to monitor customer satisfaction through order feedback.
+As a manager, I want to manage user roles and access rights for the Order Processing System.
+As an administrator, I want to back up and restore the Order Processing System data.
+As an administrator, I want to manage system configurations and settings.
+As an administrator, I want to monitor system performance and security.
