@@ -1,3 +1,7 @@
+import os
+import regex as re
+
+import requests
 from openai import OpenAI
 from panel.chat import ChatMessage
 import panel as pn
@@ -19,21 +23,67 @@ def get_completion(prompt, model="gpt-4o"):
     )
     return response.choices[0].message.content
 
-
-def get_completion_from_messages(user_stories, prompt, model="gpt-4o-mini", temperature=0):
+#GPT version
+def get_completion_from_messages(user_stories, prompt, model="gpt-5-mini", temperature=0):
     messages = [{"role": "system",
                  "content": f"You are an expert in creating domain models from given user stories. I have been given a set of user stories and I need to extract domain models for the purpose of implementing the software system.\n\nUser Stories:\n{user_stories}"},
                 {"role": "user", "content": f"{prompt}"}]
     response = client.chat.completions.create(
         model=model,
         messages=messages,
-        temperature=temperature,  # this is the degree of randomness of the model's output
-        max_tokens=2048,
+        #temperature=temperature,  # this is the degree of randomness of the model's output
+        #max_tokens=2048,
         top_p=1,
         frequency_penalty=0,
         presence_penalty=0
     )
     return response.choices[0].message.content
+
+#REQUESTY version
+# def get_completion_from_messages(user_stories, prompt, model="google/gemini-2.5-flash", temperature=0):
+#     REQUESTY_API_KEY = os.getenv("REQUESTY_API_KEY")
+#     REQUESTY_ENDPOINT = "https://router.requesty.ai/v1/chat/completions"
+#
+#     headers = {
+#         "Content-Type": "application/json",
+#         "Authorization": f"Bearer {REQUESTY_API_KEY}"
+#     }
+#
+#     messages = [
+#         {
+#             "role": "system",
+#             "content": (
+#                 "You are an expert in creating domain models from given user stories. "
+#                 "I have been given a set of user stories and I need to extract domain models "
+#                 "for the purpose of implementing the software system."
+#                 "Output only the JSON content, no other text\n\n"
+#                 f"User Stories:\n{user_stories}"
+#             )
+#         },
+#         {
+#             "role": "user",
+#             "content": prompt
+#         }
+#     ]
+#
+#     payload = {
+#         "model": model,
+#         "messages": messages,
+#         "temperature": temperature,
+#         "max_tokens": 2048,
+#         "top_p": 1.0,
+#         "presence_penalty": 0,
+#         "frequency_penalty": 0
+#     }
+#
+#     response = requests.post(REQUESTY_ENDPOINT, headers=headers, json=payload)
+#     print(response)
+#     response_json = response.json()
+#     output = response_json["choices"][0]["message"]["content"]
+#     match = re.search(r'\{(?:[^{}]|(?R))*\}', output, re.DOTALL)
+#     json_output = match.group(0)
+#     print(json_output)
+#     return json_output
 
 
 def create_chat_message(message_body, user="Assistant", avatar=ChatMessage.default_avatars["tool"]):

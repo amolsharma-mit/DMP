@@ -218,7 +218,7 @@ Go through each individual user story first, like the examples given below,
 find the relationships involved in that user story and then 
 collect all the relationships you found in each individual user story.
 Find as many relationships as possible from each user story, 
-each user contains at the minimum two relationships so for a dataset of 10 user stories there must be 20 relationship in the output at the minimum.
+each user story contains at the minimum two relationships so for a dataset of 10 user stories there must be 20 relationship in the output at the minimum.
 ********************************************************
 ✅ Examples of my manually extracted relationships among classes (5 user stories with their corresponding extracted relationships).
 
