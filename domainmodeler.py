@@ -213,60 +213,60 @@ Note: Strictly output only the JSON data with in {}, nothing else.
 
     def get_relationships_json(self):
         prompt = """
-Find relationships  between the following classes:  """ + f"{str(self.class_list)}" + """  involved in the user stories.
-Go through each individual user story first, like the examples given below, 
-find the relationships involved in that user story and then 
-collect all the relationships you found in each individual user story.
-Find as many relationships as possible from each user story, 
-each user story contains at the minimum two relationships so for a dataset of 10 user stories there must be 20 relationship in the output at the minimum.
-********************************************************
-✅ Examples of my manually extracted relationships among classes (5 user stories with their corresponding extracted relationships).
-
-As a Kitchen Employee, I want to see the orders with their status, so that I am aware of the progress of each order.
-
-KitchenEmployee sees Order
-Order has Status
-Order has Progress
-
-As a Kitchen Employee, I want to have an overview of all orders at a glance, so that I cannot miss any relevant orders.
-
-KitchenEmployee overviews Order
-Order has Relevance
-
-As a Kitchen Employee, I want to receive only the products of an order, so that I do not get confused by other irrelevant products.
-
-KitchenEmployee receives Product
-Product belongsTo Order
-Product hasRelevanceTo Order
-
-As a Kitchen Employee, I want to see special requests to be shown together with the product they are concerned about, so that I know if I have to prepare a product in a special way 
-
-KitchenEmployee sees Request
-Request concernedAbout Product
-KitchenEmployee prepares Product
-
-As a Kitchen Employee, I want to have the order number shown together with its related products, so that I am aware of which order the products are coming from.
-
-KitchenEmployee isShown OrderNumber
-OrderNumber isRelatedWith Product
-
-NOTE: 
-In the relationship 'KitchenEmployee receives Product'
-KitchenEmployee is class.
-receives is name (of relationship).
-Product is class.
-
-Output the relationships in the following JSON format:
-{
-  "relationships": [
-       {
-          "name": ,
-          "source": class,
-          "target": class
-        },
-   ...
-}
-Only output JSON data with in {}, nothing else.
+        Find relationships  between the following classes:  """ + f"{str(self.class_list)}" + """  involved in the user stories.
+        Go through each individual user story first, like the examples given below, 
+        find the relationships involved in that user story and then 
+        collect all the relationships you found in each individual user story.
+        Find as many relationships as possible from each user story, 
+        each user story contains at the minimum two relationships so for a dataset of 10 user stories there must be 20 relationship in the output at the minimum.
+        ********************************************************
+        ✅ Examples of my manually extracted relationships among classes (5 user stories with their corresponding extracted relationships).
+        
+        As a Kitchen Employee, I want to see the orders with their status, so that I am aware of the progress of each order.
+        
+        KitchenEmployee sees Order
+        Order has Status
+        Order has Progress
+        
+        As a Kitchen Employee, I want to have an overview of all orders at a glance, so that I cannot miss any relevant orders.
+        
+        KitchenEmployee overviews Order
+        Order has Relevance
+        
+        As a Kitchen Employee, I want to receive only the products of an order, so that I do not get confused by other irrelevant products.
+        
+        KitchenEmployee receives Product
+        Product belongsTo Order
+        Product hasRelevanceTo Order
+        
+        As a Kitchen Employee, I want to see special requests to be shown together with the product they are concerned about, so that I know if I have to prepare a product in a special way 
+        
+        KitchenEmployee sees Request
+        Request concernedAbout Product
+        KitchenEmployee prepares Product
+        
+        As a Kitchen Employee, I want to have the order number shown together with its related products, so that I am aware of which order the products are coming from.
+        
+        KitchenEmployee isShown OrderNumber
+        OrderNumber isRelatedWith Product
+        
+        NOTE: 
+        In the relationship 'KitchenEmployee receives Product'
+        KitchenEmployee is class.
+        receives is name (of relationship).
+        Product is class.
+        
+        Output the relationships in the following JSON format:
+        {
+          "relationships": [
+               {
+                  "name": ,
+                  "source": class,
+                  "target": class
+                },
+           ...
+        }
+        Only output JSON data as per the output format stated above with in {}, nothing else.
         """
         print(prompt)
         response = get_completion_from_messages(self.user_stories, prompt)
